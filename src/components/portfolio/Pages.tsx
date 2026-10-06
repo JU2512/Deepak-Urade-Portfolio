@@ -77,7 +77,6 @@ export function ProjectIntro({ p }: { p: Project }) {
           <h2 className="text-3xl font-bold uppercase tracking-wide text-primary md:text-5xl">{p.title}</h2>
           <p className="label mt-3 text-secondary">{p.type}</p>
           <p className="label mt-1 text-secondary">{p.year}</p>
-          <p className="ml-auto mt-3 max-w-md font-serif italic text-foreground/70">{p.description}</p>
         </div>
       </div>
       <div className="mt-4 h-px bg-foreground/40" />
