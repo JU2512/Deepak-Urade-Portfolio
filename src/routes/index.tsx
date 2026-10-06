@@ -40,7 +40,7 @@ function Book() {
     return () => window.removeEventListener("keydown", k);
   }, [i, go]);
 
-  const page = pages[i];
+  const page = pages[i]!;
   const proj = "project" in page ? page.project : null;
   const sub = page.kind === "intro" ? 1 : page.kind === "details" ? 2 : 3;
 
