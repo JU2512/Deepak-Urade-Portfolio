@@ -72,13 +72,8 @@ export function ProjectIntro({ p }: { p: Project }) {
         <Placeholder src={p.heroImage} label="Hero Render / Photograph" />
         <span className="absolute bottom-2 right-4 text-7xl font-bold leading-none text-transparent md:text-9xl" style={{ WebkitTextStroke: "1.5px var(--secondary)" }}>{p.id}</span>
       </div>
-      <div className="mt-6 grid gap-6 md:grid-cols-2">
-        <div className="flex gap-3">
-          {p.materials.slice(0, 4).map((m) => (
-            <div key={m.label} className="h-16 w-16 md:h-20 md:w-20"><Placeholder src={m.image} label={m.label} className="[&_svg]:hidden [&_span:last-child]:hidden" /></div>
-          ))}
-        </div>
-        <div className="text-right rise" style={{ animationDelay: ".2s" }}>
+      <div className="mt-6 flex justify-end rise" style={{ animationDelay: ".2s" }}>
+        <div className="text-right">
           <h2 className="text-3xl font-bold uppercase tracking-wide text-primary md:text-5xl">{p.title}</h2>
           <p className="label mt-3 text-secondary">{p.type}</p>
           <p className="label mt-1 text-secondary">{p.year}</p>

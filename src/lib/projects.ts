@@ -1,4 +1,6 @@
 // Edit project data here. Set any image field to a URL to replace its placeholder.
+import oakridge from "@/assets/oakridge.jpg.asset.json";
+
 export type Project = {
   id: string; title: string; type: string; year: string;
   concept: string; description: string;
@@ -21,7 +23,18 @@ const make = (n: number): Project => {
   };
 };
 
-export const projects: Project[] = Array.from({ length: 7 }, (_, i) => make(i + 1));
+export const projects: Project[] = Array.from({ length: 6 }, (_, i) => make(i + 1));
+
+// Project 02 — Oakridge International School
+const oakridgeProject = projects[1]!;
+oakridgeProject.title = "Oakridge International School";
+oakridgeProject.type = "Commercial";
+oakridgeProject.year = "2026";
+oakridgeProject.description =
+  "An educational interior designed for Oakridge International School, combining functional space planning with vibrant colours, natural elements, and comfortable collaborative spaces to create a welcoming environment for students and staff.";
+oakridgeProject.heroImage = oakridge.url;
+oakridgeProject.detailImage1 = oakridge.url;
+oakridgeProject.detailImage2 = oakridge.url;
 
 export type PageDef =
   | { kind: "cover" } | { kind: "about" } | { kind: "contents" } | { kind: "contact" }
