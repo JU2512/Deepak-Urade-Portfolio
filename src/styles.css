@@ -33,7 +33,7 @@
 
 @layer base {
   * { border-color: var(--color-border); }
-  html, body { height: 100%; }
+  html { scroll-snap-type: y proximity; scroll-behavior: smooth; }
   body { background: var(--color-background); color: var(--color-foreground); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
 }
 
