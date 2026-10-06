@@ -2,7 +2,7 @@ import cover from "@/assets/cover.png.asset.json";
 import portrait from "@/assets/deepak.png.asset.json";
 import { projects, projectStart, type Project } from "@/lib/projects";
 
-export function Placeholder({ src, label = "Project Image", className = "" }: { src?: string; label?: string; className?: string }) {
+export function Placeholder({ src, label = "Project Image", className = "" }: { src?: string | undefined; label?: string; className?: string }) {
   if (src) return <img src={src} alt={label} className={`h-full w-full object-cover ${className}`} />;
   return (
     <div className={`flex h-full w-full flex-col items-center justify-center gap-2 border border-border bg-muted/60 text-muted-foreground ${className}`}>
