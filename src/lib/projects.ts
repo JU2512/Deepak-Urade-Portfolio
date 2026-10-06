@@ -1,5 +1,6 @@
 // Edit project data here. Set any image field to a URL to replace its placeholder.
 import oakridge from "@/assets/oakridge.jpg.asset.json";
+import oakridgeMoodboard from "@/assets/oakridge-moodboard.png.asset.json";
 
 export type Project = {
   id: string; title: string; type: string; year: string;
