@@ -17,9 +17,7 @@ const Num = ({ n }: { n: string }) => <span className="font-serif text-6xl leadi
 
 export function Cover() {
   return (
-    <div className="flex h-full w-full items-center justify-center">
-      <img src={cover.url} alt="Interior Designer Portfolio — Deepak Urade" className="max-h-full max-w-full object-contain" />
-    </div>
+    <img src={cover.url} alt="Interior Designer Portfolio — Deepak Urade" className="h-full w-full object-cover object-left" />
   );
 }
 
