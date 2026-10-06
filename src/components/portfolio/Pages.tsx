@@ -102,7 +102,7 @@ export function ProjectDetails({ p }: { p: Project }) {
       <div className="flex flex-col rise" style={{ animationDelay: ".15s" }}>
         <h2 className="text-xl font-bold uppercase tracking-wide text-primary">{p.title}</h2>
         <dl className="mt-4 grid grid-cols-[6rem_1fr] gap-y-1 text-sm">
-          {rows.map(([k, v]) => (<><dt key={k} className="text-muted-foreground">{k}:</dt><dd className="text-foreground/80">{v}</dd></>))}
+          {rows.flatMap(([k, v]) => [<dt key={k} className="text-muted-foreground">{k}:</dt>, <dd key={k + "v"} className="text-foreground/80">{v}</dd>])}
         </dl>
         <p className="label mt-6 text-secondary">Design Concept</p>
         <p className="mt-2 text-sm leading-7 text-foreground/80">{p.concept}</p>
