@@ -17,7 +17,9 @@ const Num = ({ n }: { n: string }) => <span className="font-serif text-6xl leadi
 
 export function Cover() {
   return (
-    <img src={cover.url} alt="Interior Designer Portfolio — Deepak Urade" className="h-full w-full object-cover object-left" />
+    <div className="h-full w-full overflow-hidden bg-background">
+      <img src={cover.url} alt="Interior Designer Portfolio — Deepak Urade" className="h-full w-full object-contain" />
+    </div>
   );
 }
 
@@ -28,9 +30,8 @@ export function About() {
         <img src={portrait.url} alt="Deepak Urade" className="h-full w-full object-cover object-top grayscale-[15%]" />
       </div>
       <div className="rise flex max-w-xl flex-col self-center pb-4" style={{ animationDelay: ".15s" }}>
-        <h1 className="text-3xl font-semibold uppercase leading-tight tracking-wide text-primary md:text-5xl">Deepak<br />Urade</h1>
+        <h1 className="text-3xl font-semibold uppercase leading-tight tracking-wide text-primary md:text-5xl">About<br />Me</h1>
         <div className="my-8 h-px w-16 bg-primary" />
-        <h2 className="mb-4 text-xl font-semibold tracking-wide text-foreground">HELLO!</h2>
         <div className="space-y-4 text-justify font-serif text-lg italic leading-relaxed text-foreground/85">
           <p>I believe every space has a story to tell.</p>
           <p>I’m <b className="not-italic font-semibold">Deepak Urade</b>, an Interior Designer who enjoys turning ideas into spaces that feel thoughtful, functional, and inviting. From understanding a client’s vision to shaping the smallest details, I focus on creating interiors that balance aesthetics with everyday comfort.</p>
