@@ -36,6 +36,7 @@ oakridgeProject.description =
 oakridgeProject.heroImage = oakridge.url;
 oakridgeProject.detailImage1 = oakridge.url;
 oakridgeProject.detailImage2 = oakridge.url;
+oakridgeProject.materialBoardImage = oakridgeMoodboard.url;
 
 export type PageDef =
   | { kind: "cover" } | { kind: "about" } | { kind: "contents" } | { kind: "contact" }
