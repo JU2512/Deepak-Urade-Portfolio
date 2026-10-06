@@ -121,16 +121,8 @@ export function ProjectMoodboard({ p }: { p: Project }) {
     <div className="grid h-full gap-8 md:grid-cols-[2fr_3fr]">
       <div className="flex flex-col rise">
         <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-foreground">Moodboard</h2>
-        <div className="mt-6 grid flex-1 grid-cols-3 gap-3">
-          {p.materials.map((m, i) => (
-            <div key={m.label} className={`min-h-20 ${i === 0 ? "col-span-2" : ""}`}><Placeholder src={m.image} label={m.label} /></div>
-          ))}
-          <div className="col-span-2 flex flex-col justify-end">
-            <p className="label mb-2 text-muted-foreground">Colour Palette</p>
-            <div className="flex h-10 border border-border">
-              {["bg-background", "bg-muted", "bg-accent", "bg-border"].map((c) => <div key={c} className={`flex-1 ${c}`} />)}
-            </div>
-          </div>
+        <div className="mt-6 min-h-[40vh] flex-1">
+          <Placeholder src={p.materialBoardImage} label="Material Moodboard" />
         </div>
         <div className="mt-6">
           <p className="text-xs font-bold uppercase tracking-[0.2em]">Keywords</p>
