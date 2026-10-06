@@ -60,7 +60,7 @@ function Book() {
   const menuItems: [string, number][] = [["Home", 0], ["About", 1], ["Contents", 2], ...projects.map((p, n) => [p.title, projectStart(n)] as [string, number]), ["Contact", total - 1]];
 
   return (
-    <div className="h-screen snap-y snap-mandatory overflow-y-auto scroll-smooth">
+    <div>
       <header className={`fixed inset-x-0 top-0 z-40 flex items-center justify-between px-5 py-4 transition-opacity duration-500 md:px-10 ${i === 0 ? "opacity-0 hover:opacity-100" : "bg-background/90"}`}>
         <button onClick={() => go(0)} className="label text-primary">Deepak Urade</button>
         <div className="flex items-center gap-6">
