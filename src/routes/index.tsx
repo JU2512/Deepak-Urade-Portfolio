@@ -49,9 +49,9 @@ function Book() {
     page.kind === "about" ? <About /> :
     page.kind === "contents" ? <Contents go={go} /> :
     page.kind === "contact" ? <Contact /> :
-    page.kind === "intro" ? <ProjectIntro p={projects[proj!]} /> :
-    page.kind === "details" ? <ProjectDetails p={projects[proj!]} /> :
-    <ProjectMoodboard p={projects[proj!]} />;
+    page.kind === "intro" ? <ProjectIntro p={projects[proj!]!} /> :
+    page.kind === "details" ? <ProjectDetails p={projects[proj!]!} /> :
+    <ProjectMoodboard p={projects[proj!]!} />;
 
   const menuItems: [string, number][] = [["Home", 0], ["About", 1], ["Contents", 2], ...projects.map((p, n) => [p.title, projectStart(n)] as [string, number]), ["Contact", total - 1]];
 
