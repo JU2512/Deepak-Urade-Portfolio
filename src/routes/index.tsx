@@ -33,7 +33,7 @@ function Book() {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (!e.isIntersecting) return;
-        const n = Number((e.target as HTMLElement).dataset.n);
+        const n = Number((e.target as HTMLElement).dataset["n"]);
         setI(n);
         setSeen((s) => (s.has(n) ? s : new Set(s).add(n)));
       });
