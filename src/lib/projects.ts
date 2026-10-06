@@ -4,6 +4,7 @@ export type Project = {
   concept: string; description: string;
   heroImage?: string; detailImage1?: string; detailImage2?: string; floorPlan?: string;
   moodboardImages: (string | undefined)[];
+  materialBoardImage?: string;
   materials: { label: string; image?: string }[];
   keywords: string[];
 };
