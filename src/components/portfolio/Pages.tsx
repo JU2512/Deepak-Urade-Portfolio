@@ -81,7 +81,7 @@ export function ProjectIntro({ p }: { p: Project }) {
         <div className="text-right rise" style={{ animationDelay: ".2s" }}>
           <h2 className="text-3xl font-bold uppercase tracking-wide text-primary md:text-5xl">{p.title}</h2>
           <p className="label mt-3 text-secondary">{p.type}</p>
-          <p className="label mt-1 text-secondary">{p.location}, {p.year}</p>
+          <p className="label mt-1 text-secondary">{p.year}</p>
           <p className="ml-auto mt-3 max-w-md font-serif italic text-foreground/70">{p.description}</p>
         </div>
       </div>
@@ -91,7 +91,7 @@ export function ProjectIntro({ p }: { p: Project }) {
 }
 
 export function ProjectDetails({ p }: { p: Project }) {
-  const rows: [string, string][] = [["Type", p.type], ["Location", p.location], ["Site Area", p.area], ["Year", p.year]];
+  const rows: [string, string][] = [["Type", p.type], ["Year", p.year]];
   return (
     <div className="grid h-full gap-8 md:grid-cols-[3fr_2fr_auto]">
       <div className="grid min-h-[50vh] grid-rows-2 gap-3 rise">
