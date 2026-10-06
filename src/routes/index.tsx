@@ -49,9 +49,9 @@ function Book() {
     page.kind === "about" ? <About /> :
     page.kind === "contents" ? <Contents go={go} /> :
     page.kind === "contact" ? <Contact /> :
-    page.kind === "intro" ? <ProjectIntro p={projects[page.project]} /> :
-    page.kind === "details" ? <ProjectDetails p={projects[page.project]} /> :
-    <ProjectMoodboard p={projects[page.project]} />;
+    page.kind === "intro" ? <ProjectIntro p={projects[proj!]} /> :
+    page.kind === "details" ? <ProjectDetails p={projects[proj!]} /> :
+    <ProjectMoodboard p={projects[proj!]} />;
 
   const menuItems: [string, number][] = [["Home", 0], ["About", 1], ["Contents", 2], ...projects.map((p, n) => [p.title, projectStart(n)] as [string, number]), ["Contact", total - 1]];
 
@@ -61,7 +61,7 @@ function Book() {
         <button onClick={() => go(0)} className="label text-primary">Deepak Urade</button>
         <div className="flex items-center gap-6">
           {proj !== null && (
-            <span className="label hidden text-muted-foreground sm:inline">Project {projects[proj].id} · {sub}/3</span>
+            <span className="label hidden text-muted-foreground sm:inline">Project {projects[proj]!.id} · {sub}/3</span>
           )}
           {i > 2 && <button onClick={() => go(2)} className="label link-line hidden text-secondary sm:inline">Contents</button>}
           <button onClick={() => setMenu(true)} className="label flex items-center gap-2 text-primary" aria-label="Open menu">
