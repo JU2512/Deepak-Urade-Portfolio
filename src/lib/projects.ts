@@ -1,6 +1,6 @@
 // Edit project data here. Set any image field to a URL to replace its placeholder.
 export type Project = {
-  id: string; title: string; type: string; location: string; year: string; area: string;
+  id: string; title: string; type: string; year: string;
   concept: string; description: string;
   heroImage?: string; detailImage1?: string; detailImage2?: string; floorPlan?: string;
   moodboardImages: (string | undefined)[];
@@ -11,7 +11,7 @@ export type Project = {
 const make = (n: number): Project => {
   const id = String(n).padStart(2, "0");
   return {
-    id, title: `Project ${id}`, type: "[Project Type]", location: "[Location]", year: "[Year]", area: "[Area]",
+    id, title: `Project ${id}`, type: "[Project Type]", year: "[Year]",
     concept: "[Design concept — replace with the core idea behind this space.]",
     description: "[Short project description — replace with a few lines describing the brief, the approach and the resulting space.]",
     moodboardImages: [undefined, undefined, undefined],
